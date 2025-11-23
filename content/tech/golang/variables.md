@@ -1,6 +1,6 @@
 ---
 title: Go variables
-draft: "false"
+publish: "true"
 tags:
   - golang
 ---
