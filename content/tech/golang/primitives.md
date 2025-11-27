@@ -7,11 +7,11 @@ tags:
 ---
 # Numeric types
 ## Integers/Booleans
-Integers: int, int8, int16, int32, int64
-Unsigned integers: uint, uint8, uint16, uint32
-Boolean: true/false
+**Integers:** int, int8, int16, int32, int64
+**Unsigned integers:** uint, uint8, uint16, uint32
+**Boolean:** true/false
 
-mathematical expressions across primitives are not allowed, for example:
+Mathematical expressions across primitives are not allowed, for example:
 
 ```go
 var a int = 10
@@ -55,8 +55,6 @@ remainder & bitwise operations not allowed on floats.
 Arithemetic operators:
 - Addition, subtraction, multiplication, division.
 - Among same types (not across float32 and float64)
-
-
 ## Complex numbers
 complex64 and complex128 only (internally uses float32+float32 or float64+float64 for real and imaginary parts)
 ```go

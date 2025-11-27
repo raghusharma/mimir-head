@@ -1,3 +1,8 @@
+---
+title: Goroutines
+publish: "true"
+status: notion
+---
 Goroutines are very powerful feature of Go, that makes it stand apart from other languages.
 Goroutines are the threads in Go that you can use for concurrency.
 # Goroutines vs other languages threads
@@ -45,4 +50,42 @@ func main() {
 }
 ```
 Now "Hello Go" gets printed.
-# The Problem with using closures (with Goroutines)
+# Closures & Goroutines (The Problem)
+Consider the following closure:
+```go
+package main
+
+import (
+	"fmt"
+	"time"
+)
+
+func main() {
+	msg := "Hello"
+	go func() {
+		fmt.Println(msg)
+	}()
+	msg = "Goodbye"
+	time.Sleep(100 * time.Millisecond)
+}
+```
+"Goodbye" gets printed, and not "Hello", contrary to what is expected.
+This is because the closure is trying to access a variable from outside, and the memory location is updated with some other value (line 13) before it gets the chance to print it.
+This makes it risky to access the variables in the closure from outside. A better way is to pass the variable, so that the function prints the local copy of the variable, and any changes to the variable outside will not affect it.
+```go
+package main
+
+import (
+	"fmt"
+	"time"
+)
+
+func main() {
+	msg := "Hello"
+	go func(msg string) {
+		fmt.Println(msg)
+	}(msg)
+	msg = "Goodbye"
+	time.Sleep(100 * time.Millisecond)
+}
+```
