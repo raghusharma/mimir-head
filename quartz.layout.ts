@@ -1,5 +1,6 @@
 import { PageLayout, SharedLayout } from "./quartz/cfg"
 import * as Component from "./quartz/components"
+import StatusBadge from "./quartz/components/StatusBadge"
 
 // components shared across all pages
 export const sharedPageComponents: SharedLayout = {
@@ -22,6 +23,7 @@ export const defaultContentPageLayout: PageLayout = {
       condition: (page) => page.fileData.slug !== "index",
     }),
     Component.ArticleTitle(),
+    StatusBadge(),
     Component.ContentMeta(),
     Component.TagList(),
   ],

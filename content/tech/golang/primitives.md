@@ -1,4 +1,10 @@
-#golang 
+---
+title: Go Primitives
+publish: "true"
+status: half-baked
+tags:
+  - golang
+---
 # Numeric types
 ## Integers/Booleans
 Integers: int, int8, int16, int32, int64

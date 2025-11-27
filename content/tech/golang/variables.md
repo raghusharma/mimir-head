@@ -1,8 +1,9 @@
 ---
-title: Go variables
+title: Go Variables
 publish: "true"
 tags:
   - golang
+status: half-baked
 ---
 # Variable declaration and initialization
 1. Variables can be declared with `var`
