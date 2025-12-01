@@ -1,4 +1,11 @@
-#golang 
+---
+title: Go Constants
+publish: "true"
+status: notion
+tags:
+  - golang
+---
+
 - Immutable, but can be shadowed (even type can be changed in the function)
 - Replaced by the compiler at compile time
     - Value must be calculable at compile time

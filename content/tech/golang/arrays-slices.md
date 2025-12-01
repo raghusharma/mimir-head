@@ -1,4 +1,11 @@
-#golang 
+---
+title: Go Arrays and Slices
+publish: "true"
+status: half-baked
+tags:
+  - golang
+---
+
 # Array
 - Collection of items of the same type
 - Fixed size
