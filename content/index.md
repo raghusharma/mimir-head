@@ -1,6 +1,7 @@
 ---
 publish: "true"
 status: notion
+title: An Overview
 ---
 
 This digital garden is created using quartz v4.
