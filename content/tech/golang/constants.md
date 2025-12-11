@@ -1,7 +1,7 @@
 ---
 title: Go Constants
 publish: "true"
-status: notion
+status: half-baked
 tags:
   - golang
 ---
