@@ -1,4 +1,11 @@
-#golang 
+---
+title: Go Defer, Panic & Recover
+publish: "true"
+status: half-baked
+tags:
+  - golang
+---
+
 # Defer
 - Used to delay execution of a statement until function exits
 - Useful to group open & close functions together

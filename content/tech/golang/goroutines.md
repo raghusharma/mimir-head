@@ -5,7 +5,7 @@ status: notion
 ---
 Goroutines are very powerful feature of Go, that makes it stand apart from other languages.
 Goroutines are the threads in Go that you can use for concurrency.
-# Goroutines vs other languages threads
+# Threads in other languages
 The threads that traditional languages use are the OS threads, which are expensive to create and destroy, and have a large memory footprint (1-2 Mb allocated to per thread)
 Goroutines are actually an abstraction over traditional OS threads, which are very very lightweight (~2Kb), and are very easy to create and destroy. These make Go programs very efficient to create millions of threads, without performance impact. This will not be possible with threads in traditional languages (Java, C#, Python, Ruby, etc.). However modern releases of the languages are catching up to Goroutines, for example, Java has introduced virtual threads (with Project Loom) which are very similar to Goroutines.
 # Create a Goroutine
@@ -50,7 +50,8 @@ func main() {
 }
 ```
 Now "Hello Go" gets printed.
-# Closures & Goroutines (The Problem)
+# Closures & Goroutines
+## The Problem
 Consider the following closure:
 ```go
 package main
@@ -71,6 +72,7 @@ func main() {
 ```
 "Goodbye" gets printed, and not "Hello", contrary to what is expected.
 This is because the closure is trying to access a variable from outside, and the memory location is updated with some other value (line 13) before it gets the chance to print it.
+## The Solution
 This makes it risky to access the variables in the closure from outside. A better way is to pass the variable, so that the function prints the local copy of the variable, and any changes to the variable outside will not affect it.
 ```go
 package main
