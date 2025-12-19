@@ -9,4 +9,4 @@ status: notion
 - [ ] Merge Zettelkasten
 - [ ] Put additional notes for publishing
 - [ ] Create proper index page
-- [ ] Make public
+- [x] Make public

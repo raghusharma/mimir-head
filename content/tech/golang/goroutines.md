@@ -2,6 +2,8 @@
 title: Goroutines
 publish: "true"
 status: notion
+tags:
+  - golang
 ---
 Goroutines are very powerful feature of Go, that makes it stand apart from other languages.
 Goroutines are the threads in Go that you can use for concurrency.
@@ -29,7 +31,7 @@ func main() {
 If we run the above program, we don't get any output. The `main()` function itself is executed in a goroutine. The main function creates a goroutine (on line 13 when calling `sayMsg`), and then continues to execute the rest of the program. Since there is nothing else to execute, it exits as soon as the goroutine is created. The goroutine didn't get time to execute, so nothing is printed.
 Let's give the goroutine some time to execute, and let the main function wait for some time.
 
-> [!Tip]
+> [!important]
 > The method used here, `Sleep`, is a terrible way to do things, and should never be used in production for use cases like these)
 
 ```go
@@ -93,7 +95,28 @@ func main() {
 ```
 # Synchronization
 ## Wait groups
-The sleep used to force the program to wait for a specified time, so that the goroutine created in the main function gets enough time to execute. The actual time required by the goroutine could be much less than what is provided in the sleep duration. On the other hand, if there was some other logic, it could take more time than given in sleep.
+The sleep used to force the program to wait for a specified time, so that the goroutine created in the main function gets enough time to execute. The actual time required by the goroutine could be much less than what is provided in the sleep duration. (It could also take longer).
 We want the code to exit as soon as the goroutines created by the main functions exit. It should wait just enough time for the goroutines to complete.
-Well in Go, wait groups are just for this type of scenarios.
+In Go, wait groups are just for this type of scenarios. Wait groups wait for multiple goroutines to finish.
+```go
+package main
 
+import (
+	"fmt"
+	"sync"
+)
+
+var wg = sync.WaitGroup{}
+
+func main() {
+	msg := "Hello"
+	wg.Add(1)
+	go func(msg string) {
+		fmt.Println(msg)
+		wg.Done()
+	}(msg)
+	msg = "Goodbye"
+	wg.Wait()
+}
+```
+Here, we create a wait group on line 8.

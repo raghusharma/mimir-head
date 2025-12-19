@@ -2,7 +2,6 @@
 title: Publish Status
 status: notion
 ---
-
 # Published notes:
 ```dataview
 LIST rows.file.path
