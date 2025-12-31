@@ -15,7 +15,7 @@ i = 42
 ```go
 var i int = 42 // This is not recommended. Instead use walrus for declare and initialize
 ```
-3. walrus (:=) to declare and initialize
+3. walrus operator (:=) to declare and initialize (no `var` keyword needed)
 ```go
 i := 42
 ```
@@ -32,7 +32,7 @@ func main() {
 }
 ```
 
-On package level, multiple variables can be declared and initialized together:
+On package level, multiple variables can be declared and initialized together with `var` block:
 ```go
 package main
 
@@ -87,9 +87,7 @@ import "fmt"
 var Protagonist = "Kratos" // Variable Protagonist is exported as it starts with an uppercase
 
 func main() {
-	fmt.Println(i)
-	i := 27
-	fmt.Println(i)
+	fmt.Println(Protagonist)
 }
 ```
 
@@ -113,7 +111,7 @@ var j string
 j = string(i)
 fmt.Printf("%T %v\n", j, j)
 ```
-the value will be printed as `*`, because the unicode value corresponding to 42 is `*`. So to convert a variable to string, use the package `strconv` like this:
+the value will be printed as `string *`, because the unicode value corresponding to 42 is `*`. So to convert a variable to string, use the package `strconv` like this:
 ```go
 package main
 
