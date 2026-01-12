@@ -1,6 +1,7 @@
 ---
 title: Macbook True Tone does not work in clamshell mode
 publish: "true"
+status: notion
 ---
 
 I (finally) started using my macbook in clamshell mode with this Acer CB272K 4K monitor with Type C Power Delivery.
