@@ -1,5 +1,5 @@
 ---
-title: Macbook True Tone does not work in clamshell mode
+title: No True Tone in clamshell
 publish: "true"
 status: notion
 ---
