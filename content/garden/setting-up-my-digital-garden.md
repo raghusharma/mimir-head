@@ -1,5 +1,5 @@
 ---
-title: How Perfect Procrastinator came to be
+title: How this digital garden came to be
 publish: "true"
 status: half-baked
 ---
