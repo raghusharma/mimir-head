@@ -6,7 +6,7 @@ status: half-baked
 > [!note] Disclaimer
 >This is not another setup guide. These are my experiences and some customizations that I did. Putting it out there so that someone might find useful.
 
-I had been using Obsidian on and off for a couple of years, and I stumbled upon [the blue book](https://lyz-code.github.io/blue-book/). The idea of digital garden seemed like something that I could use to help with my perfectionism. I searched for different platforms for setting up digital garden (mkdocs, Obsidian Publish, Quartz, etc.). I wasn't sure (still am not) if I will be able to do this for long, so I chose the free and easy to setup solutions. Quartz seemed to fit my criteria (at least to start playing around).
+I had been using Obsidian on and off for a couple of years, and I stumbled upon [the blue book](https://lyz-code.github.io/blue-book/) (while searching for the [blue book of Kubernetes](https://github.com/rohitg00/DevOps_Books/blob/main/The%20Kubernetes%20Book%20(Nigel%20Poulton)%20(z-lib.org).pdf)). The idea of digital garden seemed like something that I could use to help with my perfectionism. I searched for different platforms for setting up digital garden (mkdocs, Obsidian Publish, Quartz, etc.). I wasn't sure (still am not) if I will be able to do this for long, so I chose the free and easy to setup solutions. Quartz seemed to fit my criteria (at least to start playing around).
 # Setup
 [Official quartz documentation](https://quartz.jzhao.xyz/) and [this guide](https://notes.nicolevanderhoeven.com/How+to+publish+Obsidian+notes+with+Quartz+on+GitHub+Pages) are good sources to get the digital garden up and running. Here are the configuration changes I made that might be useful to others.
 # Remove quartz git history
