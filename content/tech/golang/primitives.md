@@ -1,6 +1,5 @@
 ---
 title: Go Primitives
-publish: "true"
 status: half-baked
 tags:
   - golang

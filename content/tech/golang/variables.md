@@ -1,6 +1,5 @@
 ---
 title: Go Variables
-publish: "true"
 status: half-baked
 tags:
   - golang

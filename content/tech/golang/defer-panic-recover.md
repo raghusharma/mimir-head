@@ -1,6 +1,5 @@
 ---
 title: Go Defer, Panic & Recover
-publish: "true"
 status: half-baked
 tags:
   - golang

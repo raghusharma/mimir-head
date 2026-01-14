@@ -1,6 +1,5 @@
 ---
 title: Go
-publish: "true"
 status: good-enough
 tags:
   - golang

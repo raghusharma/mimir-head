@@ -1,6 +1,5 @@
 ---
 title: Goroutines
-publish: "true"
 status: notion
 tags:
   - golang

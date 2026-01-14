@@ -1,6 +1,5 @@
 ---
 title: Go Arrays and Slices
-publish: "true"
 status: half-baked
 tags:
   - golang
