@@ -66,8 +66,6 @@ a := make([]int, 10, 100) // slice with length = 10, capacity = 100
 
 - most of the operations that you can do on array can be done on slices
 - Assignment to another variables does not create a copy, but points to the same slice
-- `len` can be used to determine the length
-- `cap` function returns the length of the underlying array/slice
 ```go
 a := []int{1, 2, 3}
 b := a // a & b are same slice
@@ -77,6 +75,8 @@ fmt.Println(b) // [1, 5, 3]
 fmt.Printf("Length: %v\n", len(a))
 ```
 
+- `len` can be used to determine the length
+- `cap` function returns the length of the underlying array/slice
 ```go
 package main
 
